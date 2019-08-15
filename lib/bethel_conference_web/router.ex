@@ -8,4 +8,10 @@ defmodule BethelConferenceWeb.Router do
   scope "/api", BethelConferenceWeb do
     pipe_through :api
   end
+
+  scope "/", BethelConferenceWeb do
+    pipe_through(:api)
+
+    post("/interpreter", InterpreterController, :incoming)
+  end
 end

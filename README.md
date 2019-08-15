@@ -22,3 +22,4 @@ Ready to run in production? Please [check our deployment guides](https://hexdocs
 - https://www.twilio.com/labs/twimlets
 - https://stackoverflow.com/questions/54786454/twilio-how-can-i-set-a-moderator-in-a-conference
 - https://www.malco.com/images/menu/Twilio%20Cookbook%20by%20Roger%20Stringer%20-%20Sep%202013.pdf
+- https://www.twilio.com/docs/voice/tutorials/how-to-create-conference-calls-node-js

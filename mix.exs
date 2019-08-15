@@ -19,7 +19,7 @@ defmodule BethelConference.MixProject do
   def application do
     [
       mod: {BethelConference.Application, []},
-      extra_applications: [:logger, :runtime_tools]
+      extra_applications: [:logger, :runtime_tools, :ex_twiml]
     ]
   end
 
@@ -37,7 +37,6 @@ defmodule BethelConference.MixProject do
       {:gettext, "~> 0.11"},
       {:jason, "~> 1.0"},
       {:plug_cowboy, "~> 2.0"},
-      {:ex_twilio, "~> 0.7.0"},
       {:ex_twiml, "~> 2.1.3"}
     ]
   end
