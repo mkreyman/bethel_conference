@@ -8,7 +8,7 @@ defmodule BethelConference.Twilio do
       You will be connected once one of them joins the call.
       """)
 
-      dial time_limit: 120 do
+      dial do
         conference("Bethel Enterpreter",
           muted: false,
           wait_url: "http://twimlets.com/holdmusic?Bucket=com.twilio.music.guitars",
@@ -27,7 +27,7 @@ defmodule BethelConference.Twilio do
       You will be connected once one of our interpreters joins the call.
       """)
 
-      dial time_limit: 120 do
+      dial do
         conference("Bethel Enterpreter",
           muted: true,
           wait_url: "http://twimlets.com/holdmusic?Bucket=com.twilio.music.guitars",
