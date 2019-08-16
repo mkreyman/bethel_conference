@@ -1,4 +1,4 @@
-# BethelConference (WIP)
+# BethelConference
 
 To start your Phoenix server:
 
