@@ -18,7 +18,9 @@ Then start your Phoenix server:
 Test with `curl`. Notice that the response depends on whether the 'From' number is one of the interpreters/moderators or not. Make sure that the 'plus' sign is url encoded.
 
 ```
-curl -d "From=%2B13034567890&To=blah" -X POST http://localhost:4000/interpreter
+curl -d "From=%2B13034567890" -X POST http://localhost:4000/interpreter
 ```
 
 Ready to run in production? [Deploy to Heroku](https://hexdocs.pm/phoenix/heroku.html).
+
+Configure a webhook for your Twilio phone number with the production url. Read one of [Twilio guides](https://www.twilio.com/blog/2016/07/how-to-build-a-conference-line-with-twilio.html) for more details.
