@@ -13,6 +13,7 @@ defmodule BethelConferenceWeb.Router do
     pipe_through(:api)
 
     post("/interpreter", InterpreterController, :handle_call)
+    post("/*anything", InterpreterController, :not_implemented)
     get("/*anything", InterpreterController, :not_implemented)
   end
 end
