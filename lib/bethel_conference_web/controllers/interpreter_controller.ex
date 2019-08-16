@@ -3,7 +3,7 @@ defmodule BethelConferenceWeb.InterpreterController do
 
   alias BethelConference.Twilio
 
-  @interpreters System.get_env("BETHEL_INTERPRETERS") |> Jason.decode!()
+  @interpreters System.get_env("INTERPRETERS") |> Jason.decode!()
 
   def incoming(conn, %{"To" => _to, "From" => from}) do
     response =

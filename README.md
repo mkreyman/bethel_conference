@@ -1,25 +1,24 @@
-# BethelConference
+# Conference service for Bethel Community's interpreters (visit us at http://bethel.community)
 
-To start your Phoenix server:
+To set up your environment, you need export the following env variables, i.e.
+
+```
+# JSON encoded array of phone numbers (as strings)
+export INTERPRETERS="[\"+13034567890\",\"+13039087654\"]"
+
+# generate with 'mix phx.gen.secret'
+export SECRET_KEY_BASE="very long string"
+```
+
+Then start your Phoenix server:
 
 - Install dependencies with `mix deps.get`
 - Start Phoenix endpoint with `mix phx.server`
 
-Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
+Test with `curl`. Notice that the response depends on whether the 'From' number is one of the interpreters/moderators or not. Make sure that the 'plus' sign is url encoded.
 
-Ready to run in production? Please [check our deployment guides](https://hexdocs.pm/phoenix/deployment.html).
+```
+curl -d "From=%2B13034567890&To=blah" -X POST http://localhost:4000/interpreter
+```
 
-## Useful links
-
-- https://www.twilio.com/console/voice/twiml/overview
-- https://www.twilio.com/docs/voice/tutorials/how-to-create-conference-calls-ruby
-- https://github.com/danielberkompas/ex_twilio
-- https://github.com/danielberkompas/ex_twiml
-- https://www.twilio.com/blog/2016/07/how-to-build-a-conference-line-with-twilio.html
-- https://www.twilio.com/docs/voice/twiml/conference?code-sample=code-a-moderated-conference-begin-on-enter-9&code-language=Node.js&code-sdk-version=3.x
-- https://www.twilio.com/blog/2017/02/stripe-sms-notifications-via-twilio-heroku-and-python.html
-- https://www.twilio.com/blog/search?q=elixir
-- https://www.twilio.com/labs/twimlets
-- https://stackoverflow.com/questions/54786454/twilio-how-can-i-set-a-moderator-in-a-conference
-- https://www.malco.com/images/menu/Twilio%20Cookbook%20by%20Roger%20Stringer%20-%20Sep%202013.pdf
-- https://www.twilio.com/docs/voice/tutorials/how-to-create-conference-calls-node-js
+Ready to run in production? [Deploy to Heroku](https://hexdocs.pm/phoenix/heroku.html).
