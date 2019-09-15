@@ -1,4 +1,6 @@
-# Conference service for Bethel Community's interpreters (visit us at http://bethel.community)
+# Conference service for Bethel Community's interpreters
+
+(visit us at http://bethel.community)
 
 To set up your environment, you need export the following env variables, i.e.
 
